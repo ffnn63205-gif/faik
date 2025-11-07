@@ -31,5 +31,10 @@ class TestApp(unittest.TestCase):
         summary = summarize_text(arabic_text, language='arabic', num_sentences=1)
         self.assertEqual(summary, "الهدف من هذا النص هو اختبار وظيفة التلخيص.")
 
+    def test_summarize_french_text(self):
+        french_text = "Ceci est un texte de test en français. Le but de ce texte est de tester la fonction de résumé. La troisième phrase est ici."
+        summary = summarize_text(french_text, language='french', num_sentences=1)
+        self.assertEqual(summary, "Le but de ce texte est de tester la fonction de résumé.")
+
 if __name__ == "__main__":
     unittest.main()
